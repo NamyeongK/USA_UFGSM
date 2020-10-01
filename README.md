@@ -1,16 +1,15 @@
 # Repurposing Pretrained Models for Robust Out-of-domain Few-Shot Learning
 
-# Running environment
+## Running environment
 	= python 3.6
 	= pytorch 1.4
 	= nVidia v100 GPU
 		
-# Our code forked from https://github.com/dragen1860/MAML-Pytorch
+## Our code forked from https://github.com/dragen1860/MAML-Pytorch
 
-# We use 4 datasets in the paper: miniImageNet, CUB-200-2011, VGG Flower, and Traffic Sign
-	= miniImageNet
-		: we use the split. https://github.com/twitter/meta-learning-lstm/tree/master/data/miniImagenet
-	
+# Datasets
+	= We use 4 datasets in the paper: miniImageNet, CUB-200-2011, VGG Flower, and Traffic Sign
+	= miniImageNet: we use the split. https://github.com/twitter/meta-learning-lstm/tree/master/data/miniImagenet	
 	= CUB-200-2011, VGG Flower, and Traffic Sign
 		* We did not any preprocess for the datasets.
 		* We just change the folder name to use the datasets in the code.
