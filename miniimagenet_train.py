@@ -171,15 +171,15 @@ if __name__ == '__main__':
     argparser.add_argument('--modelfile', type=str, help='pretraind model path', default='save/model.pth')
     argparser.add_argument('--optim', type=str, help='optimizer for test', default='sgd')
 
-    argparser.add_argument('--pertub_scale', type=float, help='pertub scale', default=0.05)
-    argparser.add_argument('--fgsm_epsilon', type=float, help='pertub scale', default=0.05)    
+    argparser.add_argument('--pertub_scale', type=float, help='ensemble model pertubation scale', default=0.05)
+    argparser.add_argument('--fgsm_epsilon', type=float, help='fgsm epsilon', default=0.05)    
     argparser.add_argument('--num_ensemble', type=int, help='number of ensemble models', default=5)
             
-    argparser.add_argument('--ad_train_org', action='store_true')
-    argparser.add_argument('--org_lr', action='store_true')
-    argparser.add_argument('--adaptive', action='store_true')
+    argparser.add_argument('--ad_train_org', help='baseline model training with adversarial training', action='store_true')
+    argparser.add_argument('--org_lr', help='original manner', action='store_true')
+    argparser.add_argument('--adaptive', help='model training for proposed method using adam', action='store_true')
 
-    argparser.add_argument('--enaug', action='store_true')
+    argparser.add_argument('--enaug', help='ensemble data augmentation', action='store_true')
 
     argparser.add_argument('--seed', type=int, help='random seed', default=222)
     argparser.add_argument('--domain', type=str, help='dataset domain', default='mini')
