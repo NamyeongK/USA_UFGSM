@@ -49,55 +49,54 @@ python miniimagenet_train.py (default is 5-way 1-shot classification)
 -------------------------------------------------------------------------------------
 
 ### How to run (Meta-tesing) `Our proposed method works here`
-* command (SGD) --optim=sgd
-
+* commands for SGD: --optim=sgd
 	* 5way-1shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_1shot.pth --update_lr=0.01 --optim=sgd --k_spt=1 --n_way=5 --domain=flower --ad_train_org --enaug
-```
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_1shot.pth --update_lr=0.01 --optim=sgd --k_spt=1 --n_way=5 --domain=flower --ad_train_org --enaug
+		```
 	* 5way-5shot flower dataset (Last checkpoint)
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot_last_checkpoint.pth --update_lr=0.01 --optim=sgd --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug
-```
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot_last_checkpoint.pth --update_lr=0.01 --optim=sgd --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug
+		```
 
-5way-5shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot.pth --update_lr=0.01 --optim=sgd --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug
-```
+	* 5way-5shot flower dataset
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot.pth --update_lr=0.01 --optim=sgd --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug
+		```
 
-10way-1shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_10way_1shot.pth --update_lr=0.01 --optim=sgd --k_spt=1 --n_way=10 --domain=flower --ad_train_org --enaug
-```
+	* 10way-1shot flower dataset
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_10way_1shot.pth --update_lr=0.01 --optim=sgd --k_spt=1 --n_way=10 --domain=flower --ad_train_org --enaug
+		```
 
 -------------------------------------------------------------------------------------
 
-* command (Adam) -optim=adam --adaptive
+* commands for Adam: -optim=adam --adaptive
 
-5way-1shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_1shot.pth --update_lr=0.01 --optim=adam --k_spt=1 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
-```
-5way-5shot flower dataset (Last checkpoint)
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot_last_checkpoint.pth --update_lr=0.01 --optim=adam --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
-```
+	* 5way-1shot flower dataset
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_1shot.pth --update_lr=0.01 --optim=adam --k_spt=1 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
+		```
+	* 5way-5shot flower dataset (Last checkpoint)
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot_last_checkpoint.pth --update_lr=0.01 --optim=adam --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
+		```
 
-5way-5shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot.pth --update_lr=0.01 --optim=adam --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
-```
+	* 5way-5shot flower dataset
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot.pth --update_lr=0.01 --optim=adam --k_spt=5 --n_way=5 --domain=flower --ad_train_org --enaug --adaptive
+		```
 
-10way-1shot flower dataset
-```bash
-python miniimagenet_train.py --mode=test --modelfile=save/model_10way_1shot.pth --update_lr=0.01 --optim=adam --k_spt=1 --n_way=10 --domain=flower --ad_train_org --enaug --adaptive
-```
+	* 10way-1shot flower dataset
+		```bash
+		python miniimagenet_train.py --mode=test --modelfile=save/model_10way_1shot.pth --update_lr=0.01 --optim=adam --k_spt=1 --n_way=10 --domain=flower --ad_train_org --enaug --adaptive
+		```
 
 -------------------------------------------------------------------------------------
 
 * Run by script
 If you use slurm, you can use the script to generate jog list.
-```bash
-python make_script_all.py
-./run_all.sh
-```
+	```bash
+	python make_script_all.py
+	./run_all.sh
+	```
