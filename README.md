@@ -49,6 +49,7 @@ python miniimagenet_train.py (default is 5-way 1-shot classification)
 	
 ### How to run (Meta-tesing) `Our proposed method works here`
 * command (SGD) --optim=sgd
+
 5way-1shot flower dataset
 ```bash
 python miniimagenet_train.py --mode=test --modelfile=save/model_5way_1shot.pth --update_lr=0.01 --optim=sgd --k_spt=1 --n_way=5 --domain=flower --ad_train_org --enaug
@@ -88,7 +89,10 @@ python miniimagenet_train.py --mode=test --modelfile=save/model_5way_5shot.pth -
 ```bash
 python miniimagenet_train.py --mode=test --modelfile=save/model_10way_1shot.pth --update_lr=0.01 --optim=adam --k_spt=1 --n_way=10 --domain=flower --ad_train_org --enaug --adaptive
 ```
-	= Run by script
-		* If you use slurm, you can use the script to generate jog list.
-		* python make_script_all.py
-		* ./run_all.sh
+
+* Run by script
+If you use slurm, you can use the script to generate jog list.
+```bash
+python make_script_all.py
+./run_all.sh
+```
