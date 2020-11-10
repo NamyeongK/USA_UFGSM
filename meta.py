@@ -239,6 +239,8 @@ class Meta(nn.Module):
             tmp = torch.load(modelfile)
             net.vars = deepcopy(tmp.net.vars)
             net.vars_bn = deepcopy(tmp.net.vars_bn)
+            self.net.vars = deepcopy(tmp.net.vars)
+            self.net.vars_bn = deepcopy(tmp.net.vars_bn)
 
         if self.optim == 'adam':
             meta_optim = optim.Adam(net.parameters(), lr=self.update_lr)
