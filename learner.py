@@ -119,17 +119,6 @@ class Learner(nn.Module):
 
 
     def forward(self, x, vars=None, bn_training=True):
-        """
-        This function can be called by finetunning, however, in finetunning, we dont wish to update
-        running_mean/running_var. Thought weights/bias of bn is updated, it has been separated by fast_weights.
-        Indeed, to not update running_mean/running_var, we need set update_bn_statistics=False
-        but weight/bias will be updated and not dirty initial theta parameters via fast_weiths.
-        :param x: [b, 1, 28, 28]
-        :param vars:
-        :param bn_training: set False to not update
-        :return: x, loss, likelihood, kld
-        """
-
         if vars is None:
             vars = self.vars
 
